@@ -3,10 +3,11 @@ go:
   - 1.12.x
 
 install:
-  - sudo apt install curl
-  - curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
-  - sudo apt install nodejs
-  - sudo npm install -g serverless
+  #- sudo apt install curl
+  #- curl -sL https://deb.nodesource.com/setup_10.x | sudo bash -
+  #- sudo apt install nodejs
+  #- sudo npm install -g serverless
+  - go get -t -v ./...
   - go get -u github.com/golang/dep/...
   #- dep ensure
 
