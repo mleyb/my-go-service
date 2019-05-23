@@ -11,4 +11,4 @@ install:
   #- dep ensure
 
 script:
-  - make clean build
+  - make restore clean build
