@@ -12,4 +12,4 @@ install:
   #- dep ensure
 
 script:
-  - make clean build
+  - make deploy
