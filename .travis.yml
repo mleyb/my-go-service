@@ -8,7 +8,7 @@ install:
   - sudo apt install nodejs
   - sudo npm install -g serverless
   - go get -u github.com/golang/dep/...
-  - dep ensure
+  #- dep ensure
 
 script:
   - make clean build
