@@ -1,4 +1,7 @@
-.PHONY: build clean deploy
+.PHONY: restore build clean deploy
+
+restore:
+	go get -v
 
 build:
 	env GOOS=linux go build -ldflags="-s -w" -o bin/hello hello/main.go
@@ -7,5 +10,5 @@ build:
 clean:
 	rm -rf ./bin
 
-deploy: clean build
+deploy: restore clean build
 	sls deploy --verbose
