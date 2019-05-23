@@ -1,0 +1,14 @@
+language: go
+
+go:
+   1.11.x-
+
+install:
+  - apt update && apt upgrade -y
+  - apt install nodejs npm
+  - npm install -g serverless
+  - go get -u github.com/golang/dep/...
+  - dep ensure
+
+script:
+  - make clean build
