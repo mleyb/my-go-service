@@ -1,12 +1,11 @@
-sudo: true
 language: go
 go:
   - 1.12.x
 
 install:
-  - apt update && apt upgrade -y
-  - apt install nodejs npm
-  - npm install -g serverless
+  - sudo apt update && apt upgrade -y
+  - sudo apt install nodejs npm
+  - sudo npm install -g serverless
   - go get -u github.com/golang/dep/...
   - dep ensure
 
